@@ -1,5 +1,6 @@
 package vn.edu.iuh.fit.enums;
 
+
 public enum GrantValue {
     ENABLE (1),
     DISABLE (0);

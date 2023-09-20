@@ -50,3 +50,4 @@ public class LogRepository {
         em.merge(log);
     }
 }
+
