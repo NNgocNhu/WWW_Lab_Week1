@@ -21,13 +21,13 @@ public class ControllerServlet extends HttpServlet {
         String action = request.getParameter("action");
         PrintWriter out = response.getWriter();
 
-        if(action.equalsIgnoreCase("xxx")){
-            out.println("You call action xxxx");
+        if(action.equalsIgnoreCase("ac1")){
+            out.println("You call action ac1");
             LogRepository repository = new LogRepository();
             List<Log> lst = repository.findAll();
             lst.forEach(out::println);
 
-        }else if(action.equalsIgnoreCase("yyy")){
+        }else if(action.equalsIgnoreCase("ac2")){
             RoleRepository roleRepository =new RoleRepository();
             Role role =new Role("slave","slave","role cho slave",1);
             roleRepository.addRole(role);

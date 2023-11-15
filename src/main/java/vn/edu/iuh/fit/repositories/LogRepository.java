@@ -10,11 +10,8 @@ import java.sql.Date;
 import java.time.Instant;
 import java.util.List;
 
-//@ApplicationScoped
-//@Transactional
 
 @Stateless
-//@TransactionAttribute(TransactionAttributeType.NEVER)
 public class LogRepository {
     private EntityManager em;
 
@@ -46,7 +43,6 @@ public class LogRepository {
 
     public void update(Log log) {
         log.setLogout_time(new Date(System.currentTimeMillis()));
-        //new Date(Calendar.getInstance().getTimeInMillis());
         em.merge(log);
     }
 }
